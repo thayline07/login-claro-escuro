@@ -1,0 +1,110 @@
+:root {
+    /* Cores modo claro */
+    --primaria-claro: #D1FFA2;
+    --verde-agua: #00CF95;
+    --azul: #0098EF;
+
+    /* Cores modo escuro */
+    --primaria-escuro: #B6EADA;
+    --azul-agua-escuro: #5B8FB9;
+    --azul-escuro: #301E67;
+    --roxo-escuro: #03001C;
+
+    /* Fontes */
+    --fonte-principal: "Merriweather", serif;
+    --fonte-secundaria: "Roboto", sans-serif;
+}
+
+[data-contexto= "claro"] {
+    --background: linear-gradient(#00CF95, #0098EF);
+    --cor-primaria:var(--azul);
+    --cor-secundaria: var(--verde-agua);
+    --cor-terciaria: var(--primaria-claro);
+    --cor-fundo-login: #fff;
+    --hover-botao: linear-gradient(var(--azul), var(--verde-agua));
+
+}
+
+[data-contexto= "escuro"] {
+    --background: linear-gradient(#301E67, #03001C);
+    --cor-primaria:var(--azul-escuro);
+    --cor-secundaria: var(--azul-agua-escuro);
+    --cor-terciaria: var(--primaria-escuro);
+    --cor-fundo-login: #000;
+    --hover-botao: linear-gradient(var(--azul-escuro), var(--roxo-escuro));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fonte-secundaria);
+}
+
+body {
+    background-image: var(--background);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-fundo-login);
+    border-radius: 5px;
+    box-shadow: 1px 1px 85px -10px var();
+    padding: 1rem 4rem 2rem 4rem;
+    height: 15rem;
+    width: 9rem;
+    margin: 0rem 2rem;
+    align-self: center;
+    align-items: flex-start;
+}
+
+.login-titulo {
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-principal);
+    font-weight: 100;
+    font-size: 2rem;
+    align-self: center;
+    margin-bottom: 2rem;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    height: fit-content;
+    row-gap: .7rem;
+}
+
+.form-login-item {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--cor-terciaria);
+    border-radius: 5px;
+    opacity: 100%;
+    padding: .7rem 1.5rem;
+    box-shadow: 1px 1px 10% var(--cor-terciaria);
+}
+
+.form-login-item::-webkit-input-placeholder {
+    color: var(--cor-terciaria);
+}
+
+#form-login-confirmar {
+    color: var(--cor-secundaria);
+    background-color: transparent;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 5px;
+    opacity: 100%;
+    padding: .7rem 2rem;
+    box-shadow: 1px 1px 10% var(--cor-terciaria);
+    margin-top: 1.2rem ;
+}
+
+#form-login-confirmar:hover {
+    background-image: var(--hover-botao);
+    color: #fff;
+}

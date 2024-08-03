@@ -1,9 +1,9 @@
 const html = document.querySelector('html');
 const botaoMudarModo = document.querySelector('#modo-claro-escuro');
 
-const imgModoEscuro = '<img class="botao-modo img-lua" src="img/lua.svg" alt="">';
+const imgModoEscuro = '<img class="botao-modo" src="img/sol.svg" alt="">';
 
-const imgModoClaro = '<img class="botao-modo" src="img/sol.svg" alt="">';
+const imgModoClaro = '<img class="botao-modo img-lua" src="img/lua.svg">';
 
 function alterarContexto(contexto) {
     html.setAttribute('data-contexto', contexto);

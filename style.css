@@ -41,10 +41,11 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background-image: var(--background);
     height: 100vh;
     display: flex;
-    justify-content: center;
 }
 
 .login {
@@ -101,10 +102,38 @@ body {
     opacity: 100%;
     padding: .7rem 2rem;
     box-shadow: 1px 1px 10% var(--cor-terciaria);
-    margin-top: 1.2rem ;
+    margin-top: 1rem ;
 }
 
 #form-login-confirmar:hover {
     background-image: var(--hover-botao);
     color: #fff;
+}
+
+#modo-claro-escuro {
+    background: none;
+    border: none;
+    height: max-content;
+    margin: 1.2rem 0 10rem 1.2rem;
+}
+
+.botao-modo {
+    width: 2rem;
+}
+
+.img-lua {
+    width: 1.5rem;
+}
+
+.form-login-esqueci {
+    background: none;
+    border: none;
+    margin: .2rem;
+    font-size: .7rem;
+    color: var(--cor-terciaria);
+    cursor: pointer;
+}
+
+.form-login-esqueci:hover {
+    text-decoration: underline;
 }
